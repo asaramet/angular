@@ -18,13 +18,14 @@ RUN apt update \
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
 # install node packages
-RUN npm install -g\
-		tslib@2.5.0 rxjs@7.8.0 zone.js@0.12.0 \
-		@angular/common@14.2.12 angular-google-charts@2.2.3 \
-		@angular-devkit/build-angular@14.2.10 @angular/animations@14.2.12 @angular/cdk@14.2.7 @angular/cli@14.2.10 \
-		@angular/compiler@14.2.12 @angular/compiler-cli@14.2.12 @angular/core@14.2.12 @angular/forms@14.2.12 \
-		@angular/material@14.2.7 @angular/platform-browser-dynamic@14.2.12 @angular/platform-browser@14.2.12 \
-		@angular/router@14.2.12
+RUN npm install -g npm@9.6.5
+RUN npm install -g \
+		tslib@2.5.0 rxjs@7.8.0 zone.js@0.13.0 \
+		@angular/common@15.2.8 angular-google-charts@2.2.3 \
+		@angular-devkit/build-angular@15.2.6 @angular/animations@15.2.8 @angular/cdk@15.2.8 @angular/cli@15.2.6 \
+		@angular/compiler@15.2.8 @angular/compiler-cli@15.2.8 @angular/core@15.2.8 @angular/forms@15.2.8 \
+		@angular/material@15.2.8 @angular/platform-browser-dynamic@15.2.8 @angular/platform-browser@15.2.8 \
+		@angular/router@15.2.8
 
 # Link globally installed modules to WORKDIR
 RUN	mkdir -p /app/node_modules 
